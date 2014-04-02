@@ -1,0 +1,6 @@
+name: sync
+description: The script to sync things
+dependencies:
+  args: any
+  path: any
+  unittest: any
