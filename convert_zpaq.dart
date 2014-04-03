@@ -251,9 +251,15 @@ var ZpaqPackages = [
   "zpaq v1.08, generates optimized code that runs about twice as fast on systems with a C++ compiler installed."],
 ["unzpaq108.cpp", "", ['unzpaq106.cpp'],
   "unzpaq108.cpp removes undefined behavior of ZPAQL shifts larger than 31 bits on non x86 hardware."],
+["bmp_j4.zip", "", ['bwt_j3.cfg'],
+  "bmp_j4 configuration for .bmp files by Jan Ondrus"],
 //<a href=bmp_j4.zip>bmp_j4</a>, configuration for .bmp files by Jan Ondrus, Oct. 14, 2009.<br>
+["bwt_slowmode1.zip", "", false,
+  "bwt_slowmode1 BWT compression based on BBB slow mode. Jan Ondrus"],
 //<a href=bwt_slowmode1.zip>bwt_slowmode1</a> BWT compression based on BBB slow mode. Jan Ondrus, Oct. 15, 2009.<br>
-//<a href=jpg_test2.zip>jpg_test2</a> JPEG config by Jan Ondrus, Oct. 20, 2009, posted Oct. 26, 2009.<br>
+["jpg_test2.zip", "", false,
+  "jpg_test2 JPEG config by Jan Ondru"],
+//<a href=>jpg_test2</a> JPEG config by Jan Ondrus, Oct. 20, 2009, posted Oct. 26, 2009.<br>
 ["zpaq109.zip", "", false,
   "zpaq v1.09, Linux port and some cosmetic bug fixes."],
 ["zpaq110.zip", "", false,
@@ -313,6 +319,8 @@ and configuration files
   "pzpaq 0.04, Windows version uses native threads and no longer requires pthreads-win32."],
 ["pzpaq.005.zip", "", false,
   "pzpaq 0.05, removes -s option, puts temporary files in \$TMPDIR or %TEMP%."],
+["bwt.1.zip", "", false,
+  "bwt v1, 4 BWT based configurations."],
 //<a href=bwt.1.zip>bwt v1</a>, Mar. 16, 2011. 4 BWT based configurations.<br>
 ["unzp.100.zip", "", false,
   "unzp 1.00, a block level parallel decompresser optimized for fast, mid, max, bwtrle1, bwt2 models with source level JIT for other models.", "2011-05-10 21:02:06.000Z"],
@@ -330,6 +338,8 @@ and configuration files
   "zpaq v3.00, Combines features of zpaq v2.05 and zp v1.03. zp support is discontinued. Windows only."],
 ["zpaq301.zip", "", false,
   "zpaq v3.01, Adds 64 bit Linux support. Includes libzpaq 3.00."],
+["bmp_j4a.zip", "", false,
+  "bmp_j4a, Updated bmp_j4 .bmp configuration for zpaq v3.01."],
 //<a href=bmp_j4a.zip>bmp_j4a</a>, July 21, 2011. Updated bmp_j4 .bmp configuration for zpaq v3.01.
 ["libzpaq300.zip", "", false,
   "libzpaq 3.00, from zpaq v3.01 but as a separate download."],
@@ -385,6 +395,8 @@ and configuration files
 ["zpaq604.zip", "", true,
   "zpaq v6.04, Compression and speed improvements by sorting by filename extension and storing uncompressible data. Adds -list -quiet."],
 //<a href=bmp_j4b.zip>bmp_j4b.zip</a>, Oct. 1, 2012. Updated bmp_j4 .bmp model to work with zpaq v6.xx<br>
+["bmp_j4b.zip", "", false,
+  "bmp_j4b.zip, Updated bmp_j4 .bmp model to work with zpaq v6.xx"],
 ["zpaq605.zip", "", true,
   "zpaq v6.05, Adds -list -history -summary, Linux port, bug fixes, and improved docs."],
 ["zpaq606.zip", "", true,
@@ -392,7 +404,11 @@ and configuration files
 ["zpaq607.zip", "", true,
   "zpaq v6.07, Fixes porting issues with Mac OS/X and Visual C++."],
 //<a href=lazy100.zip>lazy v1.00</a>, Oct. 10, 2012. A fast LZ77 compressor/preprocessor and and config.<br
+["lazy100.zip", "", false,
+  "lazy v1.00, A fast LZ77 compressor/preprocessor and and config."],
 //<a href=lazy210.zip>lazy2 v1.00</a>, Oct. 31, 2012. lazy with an E8E9 filter (and 1 GB file size limit).<br>
+["lazy210.zip", "", ['lazy.cpp', 'lazy.cfg'],
+  "lazy2 v1.00, lazy with an E8E9 filter (and 1 GB file size limit)."],
 ["zpaq616.zip", "", true,
   "zpaq v6.16, Better compression using lazy (-method 1) + e8e9 (all methods). Adds -test and -post."],
 ["zpaq617.zip", "", true,
@@ -402,6 +418,8 @@ and configuration files
 ["zpaq619.zip", "", true,
   "zpaq v6.19, Splits into zpaq (journaling archiver) and zpaqd (development tool). Adds methods 5-9. libzpaq v6.19 adds single pass compression checksums."],
 //<a href=bmp_j4c.zip>bmp_j4c</a>, Jan. 24, 2013. Updated .bmp config file to work with new zpaq/zpaqd syntax.<br>
+["bmp_j4c.zip", "", false,
+  "bmp_j4c, Updated .bmp config file to work with new zpaq/zpaqd syntax."],
 ["zpaq620.zip", "", true,
   "zpaq v6.20, Improved compression for methods 5 through 9. zpaq64.exe added Feb. 4, 2013."],
 ["zpaq621.zip", "", true,
