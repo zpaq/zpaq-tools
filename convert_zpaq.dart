@@ -184,7 +184,7 @@ int main() {
   print(p);
   env["PATH"] = p + r';D:\CI\tools\Building\msys\bin;' + env["PATH"];
   GitClean();
-  RunCommand(git, ['reset', '--hard','e0ba3a694563cd87d37ea525a9590bf536d90c22'], workingDirectory: wd_git, environment:env);
+  RunCommand(git, ['reset', '--hard','d80a5901d608e395f69b249db52faf3ee9746eb4'], workingDirectory: wd_git, environment:env);
 
   for (var x in ZpaqPackages) {
     ZpaqDownload(x);
