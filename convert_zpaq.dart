@@ -215,15 +215,15 @@ var ZpaqPackages = [
   "zpaq v0.09, removes counters from ISSE and ICM to improve speed. Not compatible with v0.09."],
 ["zpaq100.zip", "", true,
   "zpaq v1.00, (first level 1 compliant version) includes unzpaq1 candidate reference decoder. Simplified bit history tables. Not compatible with earlier versions."],
-//<a href=unzpaq1.cpp>unzpaq1</a>
+//INCLUDED in zpaq100.zip<a href=unzpaq1.cpp>unzpaq1</a>
 ["unzpaq101.cpp", "", ["unzpaq1.cpp"],
   "zpaq v1.01, Updates reference decoder comments and help message and fixes some VS2005 compiler issues. Compatible with 1.00.", "2009-04-27 17:37:07.000Z"],
 ["zpaq102.zip", "", true,
   "zpaq v1.02, Closes extracted files immediately after decompression instead of when program exits. Fixes g++ 4.4 warnings. Compatible with 1.00 and 1.01."],
-//<a href=unzpaq102.cpp>unzpaq 1.02</a>
+//INCLUDED in zpaq102.zip<a href=unzpaq102.cpp>unzpaq 1.02</a>
 ["zpaq103a.zip", "", true,
   "zpaq v1.03a, has a default compression mode (mid.cfg), supports compressing files in segments to separate blocks and extracting them as suggested in part 7 of the spec. Does not store paths by default. Does not extract to absolute paths by default. Some minor improvements."],
-//<a href=unzpaq103.cpp>unzpaq 1.03</a>
+//INCLUDED in zpaq103a.zip<a href=unzpaq103.cpp>unzpaq 1.03</a>
 ["zpaq103b.zip", "", true,
   "zpaq v1.03b, adds zpaqsfx 1.03, a stub for creating self extracting archives. No changes to zpaq or unzpaq."],
 ["zpaq104.zip", "", true,
@@ -232,18 +232,21 @@ var ZpaqPackages = [
   "zpaq v1.05, Removes built in x and p preprocessors and makes them separate programs called from config files with compile time postprocessor testing. Adds if-else-endif and do-while to ZPAQL. Many small changes."],
 ["zpaq106.zip", "", true,
   'zpaq v1.06, adds "ta" to append locater tags to allow ZPAQ streams to be detected when embedded in arbitrary data.'],
+//INCLUDED in zpaq106.zip<a href=unzpaq106.cpp>unzpaq106.cpp</a> implements it.
 /*
 ["zpaq1.pdf", "", true,
   'zpaq1.pdf revision 1 adds this recommendation. unzpaq106.cpp implements it.'],
 */
-//<a href=unzpaq106.cpp>unzpaq106.cpp</a> implements it.
 ["zpaqsfx106.zip", "", false,
   "zpaqsfx 1.06 self extracting archive stub is now separate from the ZPAQ distribution. (Replaced by zpsfx in libzpaq 2.01)", "2009-09-30 00:08:44.000Z"],
 ["zpaq107.zip", "", ['zpaq106.cpp'],
   "zpaq v1.07, adds config file parameters and fixes some bugs. From now on the specification and reference decoder are not included unless they change."],
-//<a href=bwt_j2.zip>bwt_j2</a> is a config file (by Jan Ondrus) and preprocessor for BWT compression. Posted Oct. 7, 2009.<br>
-//<a href=bwt_j3.zip>bwt_j3</a> is a bug fix for bwt_j2 to accept multiple files. Jan Ondrus, Oct 7, 2009.<br>
-//<a href=exe_j1.zip>exe_j1</a> is a config file and preprocessor for .exe and .dll files. It extends the E8E9 transform in exe.cfg to conditional jumps. Jan Ondrus, Oct. 7, 2009.<br>
+["bwt_j2.zip", "", false,
+  "bwt_j2 is a config file (by Jan Ondrus) and preprocessor for BWT compression."],
+["bwt_j3.zip", "", ['bwt_j2.cfg'],
+  "bwt_j3 is a bug fix for bwt_j2 to accept multiple files. Jan Ondrus"],
+["exe_j1.zip", "", ['exe.cfg'],
+  "exe_j1 is a config file and preprocessor for .exe and .dll files. It extends the E8E9 transform in exe.cfg to conditional jumps. Jan Ondrus"],
 ["zpaq108.zip", "", ['zpaq107.cpp'],
   "zpaq v1.08, generates optimized code that runs about twice as fast on systems with a C++ compiler installed."],
 ["unzpaq108.cpp", "", ['unzpaq106.cpp'],
@@ -284,14 +287,16 @@ var ZpaqPackages = [
   "zpaq v2.02, zpaq shows compression component statistics. Libzpaq support added."],
 ["zpaq.203.zip", "", false,
   "zpaq v2.03, adds Linux support. The remaining code is split into libzpaq 2.02, zpipe 2.01, zpsfx 1.00, and configuration files min, fast, mid, and max."],
-//<a href=libzpaq.202>libzpaq 2.02</a>
-//<a href=zpipe.201>zpipe 2.01</a>
-//<a href=zpsfx.100>zpsfx 1.00</a>
-//and configuration files
-//<a href=min.zip>min</a>
-//<a href=fast.cfg>fast</a>
-//<a href=mid.cfg>mid</a>
-//<a href=max.cfg>max</a>
+/* Following files are already included in zpaq.203.zip
+<a href=libzpaq.202>libzpaq 2.02</a>
+<a href=zpipe.201>zpipe 2.01</a>
+<a href=zpsfx.100>zpsfx 1.00</a>
+and configuration files
+<a href=min.zip>min</a>
+<a href=fast.cfg>fast</a>
+<a href=mid.cfg>mid</a>
+<a href=max.cfg>max</a>
+*/
 ["zpaq.204.zip", "", false,
   "zpaq v2.04, adds support for Visual C++, Borland, and Mars compilers in addition to g++. A Windows install script is added."],
 ["zpaq.205.zip", "", false,
