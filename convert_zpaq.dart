@@ -175,6 +175,24 @@ ZpaqCommit(x) {
   }
 }
 
+void RunFromScratch() {
+  GitClean();
+  RunCommand(git, ['reset', '--hard','d80a5901d608e395f69b249db52faf3ee9746eb4'], workingDirectory: wd_git, environment:env);
+
+  for (var x in ZpaqPackages) {
+    ZpaqDownload(x);
+    ZpaqCommit(x);
+  }
+}
+
+DeltaCommits() {
+  RunCommand(git, ['reset', '--hard','master'], workingDirectory: wd_git, environment:env);
+  for (var x in newZpaqPackages) {
+    ZpaqDownload(x);
+    ZpaqCommit(x);
+  }
+}
+
 int main() {
   env.addAll(Platform.environment);
   print(Platform.executable);
@@ -183,16 +201,19 @@ int main() {
   var p = normalize(join(Platform.executable, r'..\..\lib\_internal\pub\resource\7zip'));
   print(p);
   env["PATH"] = p + r';D:\CI\tools\Building\msys\bin;' + env["PATH"];
-  GitClean();
-  RunCommand(git, ['reset', '--hard','d80a5901d608e395f69b249db52faf3ee9746eb4'], workingDirectory: wd_git, environment:env);
-
-  for (var x in ZpaqPackages) {
-    ZpaqDownload(x);
-    ZpaqCommit(x);
+  bool runFromScratch = false;
+  if (runFromScratch) {
+    RunFromScratch();
+  } else {
+    DeltaCommits();
   }
-  
-  return -1;
+  return 0;
 }
+
+var newZpaqPackages = [
+//  ["zpaq651.zip", "", true,
+//    "zpaq v6.51, Better method 2 compression using LZ77 look-ahead. Allows filtering by attributes and clearing Windows archive bit."],
+];
 
 var ZpaqPackages = [
   ["zpaq001.zip", "", false,
